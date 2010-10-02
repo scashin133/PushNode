@@ -17,5 +17,7 @@ http.createServer(function (request, response) {
     });
   }
   
+  response.end();
+  
 }).listen(port);
 console.log('Server running at http://localhost:' + port + '/');
