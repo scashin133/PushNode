@@ -2,7 +2,7 @@ var http = require('http');
 var json = require('json');
 var events = require('events');
 var sys = require('sys');
-
+var port = 8098;
 http.createServer(function (request, response) {
   var body = "";
   
@@ -13,5 +13,5 @@ http.createServer(function (request, response) {
   request.addListener('end', function(){
     console.log(JSON.parse(body));
   });
-}).listen(8080);
-console.log('Server running at http://localhost:8080/');
+}).listen(port);
+console.log('Server running at http://localhost:' + port + '/');
